@@ -11,7 +11,7 @@ app.use(cors());
 app.get('/health', (_, res) => res.json({ ok: true, service: 'rolling-ttt-server' }));
 
 const server = http.createServer(app);
-const wss = new WebSocket.Server({ server });
+const wss = new WebSocket.Server({ server, path: '/' });
 const rooms = new Map();
 const matchmaking = [];
 

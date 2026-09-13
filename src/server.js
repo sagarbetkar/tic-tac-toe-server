@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const crypto = require('crypto');
 const WebSocket = require('ws');
-const { createInitialState, applyMove, botChooseMove } = require('../../../packages/game-engine/game_engine');
+const { createInitialState, applyMove, botChooseMove } = require('../game-engine/game_engine');
 
 const PORT = process.env.PORT || 8080;
 const app = express();
